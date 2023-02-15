@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://FruityOkapi.github.io/Portfolio_React",
+  "homepage": "https://fruityokapi.github.io/Portfolio_React",
   "private": true,
   "dependencies": {
     "@mdi/js": "^7.1.96",
