@@ -1,11 +1,20 @@
 import React from 'react';
 
 export default function Nav({currentPage, handlePageChange}) {
+    const navbarScript = 
+    `$(document).ready(function() {
+        $(".navbar-burger").click(function() {
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+        });
+      });`
+
     return (
-        <nav class="navbar is-danger-light">
+        <nav class="navbar has-background-danger-light">
+            <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="https://github.com/FruityOkapi">
-                <img src="./assets/images/Illustration.png" width="112" height="28"></img>
+                <img src="https://github.com/FruityOkapi/Portfolio/blob/main/assets/images/Illustration.png?raw=true" width="112" height="28"></img>
                 </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -28,7 +37,14 @@ export default function Nav({currentPage, handlePageChange}) {
                 <a class="navbar-item" onClick={() => handlePageChange('Contact')}>
                     Contact Me
                 </a>
+                <a class="navbar-item" onClick={() => handlePageChange('Resume')}>
+                    Resume
+                </a>
                 </div>
+            </div>
+            <script>
+                {navbarScript}
+            </script>
             </div>
         </nav>
     )

@@ -4,7 +4,7 @@ import Footer from './Footer'
 import AboutMe from './pages/AboutMe'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
-import AboutMe from './pages/AboutMe';
+import Resume from './pages/Resume'
 
 export default function PageContainer() {
     const [currentPage, setCurrentPage] = useState('AboutMe');
@@ -19,14 +19,19 @@ export default function PageContainer() {
         if (currentPage === 'Contact') {
             return <Contact />;
         }
+        if (currentPage === 'Resume') {
+            return <Resume />;
+        }
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
 
     return (
-        <div>
+        <div class="has-background-warning-light">
             <Nav currentPage={currentPage} handlePageChange={handlePageChange}/>
-            {renderPage()}
+            <div class="section is-large">
+                {renderPage()}
+            </div>
             <Footer/>
         </div>
     )

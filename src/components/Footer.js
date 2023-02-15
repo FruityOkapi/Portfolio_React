@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
     return (
         <footer class="footer">
-            <div class="content is-flex is-justify-content-space-between">\
+            <div class="content is-flex is-justify-content-space-evenly">
                 <a href="https://twitter.com/FruityOkapi">
                     <img class="image is-64x64" src="https://raw.githubusercontent.com/FruityOkapi/Portfolio/main/assets/images/twitter_circle-512.webp"></img>
                 </a>
